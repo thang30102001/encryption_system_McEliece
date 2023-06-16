@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../Icon/themify-icons-font/themify-icons/themify-icons.css">
+    <title>Document</title>
+    <link rel="stylesheet" href="../CSS/đăngNhập.css">
+    <!--  <link rel="stylesheet" href="../JS/bootstrap.min.js">
+    <link rel="stylesheet" href="../JS/jquery.min.js">
+    <link rel="stylesheet" href="../CSS/bootstrap.min.css"> -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css    ">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</head>
+<body>
+    <div class="full">
+        <div id="container">
+            <!-- Logo hình ảnh -->
+            <div id="logo">
+                <img src="../Image/logo.png">
+            </div >
+            <!-- Nội dung trang web -->
+            <div class="container mt-3 mb-3">
+                <div class="row justify-content-center">
+                    <div class="col-md-10 col-lg-8 col-xl-5">
+                        <h1 style="text-align: center;">Đăng Nhập</h1>
+                        <div class="border p-3 rounded bg-light">
+                        
+                            <form>
+                                <div class="form-group">
+                                <label for="user">Username</label>
+                                <div class="input-group mb-3">
+                                    <div class="input-group-prepend">
+                                    <span class="input-group-text">
+                                        <i class="fas fa-user"></i>
+                                    </span>
+                                    </div>
+                                    <input id="username" type="text" class="form-control" placeholder="Username">
+                                </div>
+                                </div>
+                                <div class="form-group">
+                                <label for="pass">Password</label>
+                                <div class="input-group mb-3">
+                                    <div class="input-group-prepend">
+                                    <span class="input-group-text">
+                                        <i class="fas fa-lock"></i>
+                                    </span>
+                                    </div>
+                                    <input id="password" type="password" class="form-control" placeholder="Password">
+                                </div>
+                                </div>
+                                <div class="form-group">
+                                <div class="custom-control custom-checkbox">
+                                    <input type="checkbox" class="custom-control-input" id="customCheck" name="example1">
+                                    <label class="custom-control-label" for="customCheck">Remember</label>
+                                </div>
+                                </div>
+                                <div class="form-group">
+                                    <div id="error-form" class="alert alert-danger alert-dismissible fade show" style="display: none;">
+                                        <button type="button" class="close" data-dismiss="alert">&times;</button>
+                                        <p id="errorMessage"></p>
+                                    </div>
+                                </div>
+                                <div class="form-group">
+                                <button id="submit-btn" class="btn btn-success px-5" type="submit">Login</button>
+                                </div>
+                                <div class="form-group">
+                                <p>Don't have any account? <a href="#">Register now!</a></p>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+                 <!-- Footer trang web -->
+            <footer>
+                <div class="f1">
+                    <p>TRƯỜNG ĐẠI HỌC CÔNG NGHIỆP TP. HCM</p>
+                    <p>Địa chỉ: Số 12 Nguyễn Văn Bảo, Phường 4, Quận Gò Vấp, Thành phố Hồ Chí Minh</p>
+                    <p>Điện thoại: 0283.8940 390</p>
+                    <p>Fax: 0283.9940 954</p>
+                    <p>Email: dhcn@iuh.edu.vn</p>
+                </div>
+                <div id="f2">
+                    <p>Thống kê truy cập </p>
+                    <p> Lượt truy cập: 123456</p>
+                    <p>Đang online: 2001</p>
+                </div>
+            </footer>
+        </div>
+    </div>
+    <script>
+        $(document).ready(function () {
+            let SVAccount = ['SVCNTT01', 'SVCNTT02','SVCNTT03','SVCNTT04','SVCNTT05'];
+            let GVAccount = ['GVCNTT01', 'GVCNTT02','GVCNTT03','GVCNTT04','GVCNTT05'];
+            let username = $('#username');
+            let password = $('#password');
+            let btn = $('#submit-btn');
+
+            btn.click(function (e) {
+                e.preventDefault(); 
+                if (username.val() === '' || password.val() === '') {
+                    $('#error-form').css('display', 'block');
+                    $('#errorMessage').html('Vui lòng nhập đầy đủ thông tin!')
+                }
+                else if (!SVAccount.includes(username.val())) {
+                    $('#error-form').css('display', 'block');
+                    $('#errorMessage').html('Tài khoản hoặc mật khẩu không chính xác a!')
+                }
+                else if (password.val() !== '123456') {
+                    $('#error-form').css('display', 'block');
+                    $('#errorMessage').html('Tài khoản hoặc mật khẩu không chính xác!')
+                }
+                else {
+                    e.stopPropagation();
+                    console.log(username.val(), password.val());
+                    window.location.assign("DanhSachDeTai.html")
+                    alert("Đăng nhập thành công")
+                }
+
+                if(!GVAccount.includes(username.val())){
+                    $('#error-form').css('display', 'block');
+                    $('#errorMessage').html('Tài khoản hoặc mật khẩu không chính xác a!')
+                }
+                else if (password.val() !== '123456') {
+                    $('#error-form').css('display', 'block');
+                    $('#errorMessage').html('Tài khoản hoặc mật khẩu không chính xác!')
+                }
+                else {
+                    e.stopPropagation();
+                    console.log(username.val(), password.val());
+                    window.location.assign("QLSVThamGia.html")
+                    alert("Đăng nhập thành công")
+                }
+
+            })
+            
+        })
+    </script>
+</body>
+</html>

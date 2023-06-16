@@ -1,0 +1,122 @@
+.music-author{
+	text-transform: lowercase;
+}
+.encrypt {
+    background-color: #fff;
+	border-radius: 20px;
+    box-shadow: 0 10px 50px 0 rgba(0, 0, 0, 0.2);
+    margin-bottom: 30px;
+    margin-top: -50px;
+	position: relative;
+	max-width: 100%;
+	min-height: 500px;
+    display: flex;
+}
+.side-container h1{
+    font-weight: bold;
+	margin: 0;
+}
+.side-container{
+	position: absolute;
+	height: 100%;
+}
+.side-container span{
+    font-size: 16px;
+}
+.encrypt .side-left{
+    left: 0;
+    width: 50%;
+}
+.encrypt .side-right{
+	right: 0;
+	width: 50%;
+}
+.side-container button {
+	border-radius: 20px;
+	background-color:#eeeeee;
+	color: #444;
+	font-size: 12px;
+	border: none !important;
+	font-weight: bold;
+	padding: 12px 45px;
+	letter-spacing: 1px;
+	text-transform: uppercase;
+	transition: transform 80ms ease-in;
+    cursor: pointer;
+	margin-top: 16px;
+}
+
+button:active {
+	transform: scale(0.95);
+}
+button:focus {
+	outline: none !important; 
+	border: none !important;
+}
+button.ghost {
+	background-color: transparent;
+	border-color: #FFFFFF;
+}
+.encrypt form {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	flex-direction: column;
+	padding: 0 50px;
+	height: 100%;
+	text-align: center;
+    border-radius: 20px 0px 0px 20px;
+}
+.encrypt .side-left form {
+    background:#082745;
+}
+
+.encrypt input {
+	border: none !important;
+	padding: 12px 15px;
+	margin: 8px 0;
+	width: 100%;
+	outline: none !important;
+	border-radius: 20px;
+}
+.encrypt .side-left input,
+.encrypt .side-left buton {
+	background-color: #ffffff;
+	color: 082745;
+}
+.encrypt .side-right input,
+.encrypt .side-right button {
+	background-color: #082745;
+	color: white;
+}
+#encrypt .side-right form h1,
+#encrypt .side-right form span{
+	color: #082745;
+}
+#encrypt .side-left form h1,
+#encrypt .side-left form span{
+	color: white;
+}
+#encrypt .side-left form button{
+	color: #082745;
+}
+#error{
+	color: white;
+	font-size: 16;
+	margin-top: 10px;
+}
+.poca-music-content .music-meta-data a{
+	color: #007BFF;
+}
+#spinner,
+#spinner_2{
+	position: absolute;
+	bottom: 50px;
+	font-size: 20px;
+}
+#spinner{
+	color: white;
+}
+#spinner_2{
+	color: #082745;
+}

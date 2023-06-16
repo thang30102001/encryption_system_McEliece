@@ -1,0 +1,7 @@
+Trong ví dụ này, chúng ta sử dụng mp.Pool để tạo ra một pool.
+Gồm num_workers tiến trình con để thực hiện các công việc đọc file.
+tạo khóa, mã hóa, giải mã và lưu data vào file txt.
+
+Trong ví dụ này, chúng ta sử dụng mp.Pool để tạo ra một pool.
+Gồm num_workers tiến trình con để thực hiện các công việc đọc file.
+tạo khóa, mã hóa, giải mã và lưu data vào file txt.

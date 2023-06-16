@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../Icon/themify-icons-font/themify-icons/themify-icons.css">
+    <title>Document</title>
+    <link rel="stylesheet" href="../CSS/ĐăngKýĐềTài.css">
+    <script type="text/javascript"></script>
+    <script src="../js/jquery.min.js"></script>
+    <script src="../js/bootstrap.min.js"></script>
+    <script >
+      function kiemtratensinhvien(){
+            var re =/^([A-Z]{1}[a-z]*\s)*([A-Z]{1}[a-z]*){1}$/;
+            if(re.test(document.getElementById('txtDN').value.trim()) == false)
+            {
+                tendn.innerText =" * Ghi hoa kí tự đầu dòng." ;
+                return false;
+            }
+            else {
+                tendn.innerText="*";
+                return true;
+                 
+            }
+        }
+
+        function kiemtratengv(){
+            var re = /^([A-Z]{1}[a-z]*\s)*([A-Z]{1}[a-z]*){1}$/;
+            if(re.test(document.getElementById('txtGV').value.trim()) == false)
+            {
+                giangvien.innerText =" * Ghi hoa kí tự đầu dòng." ;
+                return false;
+            }
+            else {
+                giangvien.innerText="*";
+                return true;
+                 
+            }
+        }
+        function kiemtralop(){
+            var re = /[A-Z0-9]$/;
+            if(re.test(document.getElementById('txtLOP').value.trim()) == false)
+            {
+                lop.innerText =" * Chữ ghi hoa." ;
+                return false;
+            }
+            else {
+                lop.innerText="*";
+                return true;
+                 
+            }
+        }
+         function kiemtramssv(){
+            var re = /^[0-9]{8}$/;
+            if(re.test(document.getElementById('txtMSSV').value.trim()) == false)
+            {
+                mssv.innerText =" * gồm 8 số." ;
+                return false;
+            }
+            else {
+                mssv.innerText="*";
+                return true;
+                 
+            }
+        }
+        function kiemtradetai(){
+            var re = /^[a-zA-z ]*$/;
+            if(re.test(document.getElementById('txtDT').value.trim()) == false)
+            {
+                detai.innerText =" * Sai định dạng" ;
+                return false;
+            }
+            else {
+                detai.innerText="*";
+                return true;
+                 
+            }
+        }
+                        
+              function SubmitFrom() {
+                  if ( kiemtratensinhvien() ==false || kiemtratengv()==false ||kiemtradetai()==false || kiemtramssv()==false ||  kiemtralop() == false) {
+                      alert(" ban chua nhap thong tin!");
+                      return false;
+                  }
+                  return true;
+                 
+              }
+              function btn_dk() {
+            var r = confirm("Bạn muốn gửi đề tài này không ?");
+            if (r == true) {
+                alert("Bạn đã gửi thành công")
+            } else {
+            }
+            }
+            function btn_huy(){
+                document.getElementById('txtcn').value = ''
+                document.getElementById('txtmh').value = ''
+                document.getElementById('txtph').value = ''
+            }
+    </script>
+</head>
+<body>
+    <div class="full">
+        <div id="container">
+            <!-- Logo hình ảnh -->
+            <div id="logo"> 
+                <img src="../Image/logo.png">
+            </div>
+            <!-- Nội dung trang web -->
+                  <div class="content">
+                      <!-- Header trang web -->
+                      <div id="header">
+                          <ul id="Menu">
+                                 <li><a href="../HTML/TrangChủ.html"> <i class="ti-home"></i></a></li>
+                                 <li>
+                                     <a href="">
+                                         Sinh viên
+                                         <i class="icon_down ti-angle-down"></i>
+                                     </a>
+                                     <ul class="menu_nav">
+                                         <li><a href="../HTML/DanhSachDeTai.html">Xem đồ án</a></li>
+                                         <li><a href="../HTML/ĐăngKýĐềTài.html">Đăng ký đồ án</a></li>
+                                         <li><a href="../HTML/PhảnHồi.html">Phản hồi ý kiến</a></li>
+                                         <li><a href="../HTML/TiếnĐộThựcHiện.html">Tiến độ hoàn thành</a></li>
+                                         <li><a href="../HTML/đăng nhập.html">Log-in <i class="ti-shift-right" style="margin-left: 10px; "></i></a></li>
+                                     </ul>
+                                  </li>
+                                  <li>
+                                      <a href="">Giảng viên
+                                          <i class="icon_down ti-angle-down"></i>
+                                      </a>
+                                      <ul class="menu_nav">
+                                          <li><a href="#">Quản lý đồ án</a></li>
+                                          <li><a href="#">Xem danh sách sinh viên</a></li>
+                                          <li><a href="../HTML/đăng nhập.html">Log-in <i class="ti-shift-right" style="margin-left: 10px; "></i></a></li>
+                                      </ul>
+                                   </li>
+                          </ul>
+                          <div class="search_btn">
+                                
+                                <input type="search" id="search" placeholder="Search..." />
+                          </div>
+                          <div class="dangki">
+                                <h2 style="text-align: center; margin: 20px 0px;">Đăng Kí Đồ Án: </h2>
+                              <form name="forml" onsubmit="return SubmitFrom();" method="post"  >
+                                <table>
+                                  <tr>
+                                      <td><label for="txtDN" class="title">Tên Sinh Viên: </label></td>
+                                      <td><input id="txtDN" onblur="return kiemtratensinhvien();" type="text" name="txtdn" size="30"
+                                             placeholder="Nguyen Van A" /><span id="tendn" style="color: red;">*</span></td>
+                                  </tr>
+
+                                  <tr>
+                                      <td><label for="txtMSSV" class="title">MSSV: </label></td>
+                                     <td> <input id="txtMSSV" onblur="return kiemtramssv();" type="text" name="txtmssv" size="30"
+                                             placeholder="12345678" /><span id="mssv" style="color: red;">*</span></td>
+                                  </tr>
+                                  <tr>
+                                     <td> <label for="txtLOP" class="title">Lớp: </label></td>
+                                      <td><input id="txtLOP" onblur="return kiemtralop();" type="text" name="txtlop" size="30"
+                                             placeholder="DHCNTT12C" /><span id="lop" style="color: red;">*</span></td>
+                                  </tr>
+       
+                                
+                                  <tr>
+                                     <td> <label for="txtGV" class="title">Tên Giảng Viên: </label></td>
+                                      <td><input id="txtGV" onblur="return kiemtratengv();" type="text" name="txtgv" size="30"
+                                             placeholder="Tên Giảng Viên" /><span id="giangvien" style="color: red;">*</span></td>
+                                  </tr>
+                                  <tr>
+                                      <td><label for="txtDT" class="title">Tên Đồ Án: </label></td>
+                                      
+                                      <td><textarea name="txtdt" onblur="return kiemtradetai();" id="txtDT" cols="50" rows="5" style="border-radius: 20px;"></textarea><span id="detai" style="color: red;">*</span></td>
+                                  </tr>
+                                  <tr>
+                                  <td></td>
+                                  <td>
+                                  <div class="submit">
+                                      <input type="submit" onclick="btn_dk()" style="height: 30px;width: 80px; margin: 5px 10px;" value="Gửi" id="submit" />
+                                      <input type="reset" onclick="btn_huy()" style="height: 30px;width: 80px;" value="Huỷ" id="submit" />
+                                  </div>
+                                </td>
+                                </tr>
+                                  </table>
+                                  </form>
+
+                          </div>
+
+                      </div>
+            </div>
+
+
+
+
+                <!-- Footer trang web -->
+                <footer>
+                    <div class="f1">
+                        <p>TRƯỜNG ĐẠI HỌC CÔNG NGHIỆP TP. HCM</p>
+                        <p>Địa chỉ: Số 12 Nguyễn Văn Bảo, Phường 4, Quận Gò Vấp, Thành phố Hồ Chí Minh</p>
+                        <p>Điện thoại: 0283.8940 390</p>
+                        <p>Fax: 0283.9940 954</p>
+                        <p>Email: dhcn@iuh.edu.vn</p>
+                    </div>
+                    <div id="f2">
+                        <p>Thống kê truy cập </p>
+                        <p> Lượt truy cập: 123456</p>
+                        <p>Đang online: 2001</p>
+                    </div>
+                </footer>
+        </div>
+    </div>
+</body>
+</html>

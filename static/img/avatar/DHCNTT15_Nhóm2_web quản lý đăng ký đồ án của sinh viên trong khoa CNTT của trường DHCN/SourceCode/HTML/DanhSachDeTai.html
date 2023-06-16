@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../Icon/themify-icons-font/themify-icons/themify-icons.css">
+    <title>Document</title>
+    <link rel="stylesheet" href="../CSS/DanhSáchĐềTài.css">
+</head>
+<body>
+    <div class="full">
+        <div id="container">
+            <!-- Logo hình ảnh -->
+            <div id="logo">
+                <img src="../Image/logo.png">
+            </div >
+            <!-- Nội dung trang web -->
+                     <div class="content">
+                        <!-- Header trang web -->
+                        <div id="header">
+                            <ul id="Menu">
+                                   <li><a href="../HTML/TrangChủ.html"> <i class="ti-home"></i></a></li>
+                                   <li>
+                                       <a href="">
+                                           Sinh viên
+                                           <i class="icon_down ti-angle-down"></i>
+                                       </a>
+                                       <ul class="menu_nav">
+                                           <li><a href="../HTML/DanhSachDeTai.html">Xem đồ án</a></li>
+                                           <li><a href="../HTML/ĐăngKýĐềTài.html">Đăng ký đồ án</a></li>
+                                           <li><a href="../HTML/PhảnHồi.html">Phản hồi ý kiến</a></li>
+                                           <li><a href="../HTML/TiếnĐộThựcHiện.html">Tiến độ hoàn thành</a></li>
+                                           <li><a href="../HTML/đăng nhập.html">Log-in <i class="ti-shift-right" style="margin-left: 10px; "></i></a></li>
+                                       </ul>
+                                    </li>
+                                    <li>
+                                        <a href="">Giảng viên
+                                            <i class="icon_down ti-angle-down"></i>
+                                        </a>
+                                        <ul class="menu_nav">
+                                            <li><a href="">Quản lý đồ án</a></li>
+                                            <li><a href="#">Xem danh sách sinh viên</a></li>
+                                            <li><a href="../HTML/đăng nhập.html">Log-in <i class="ti-shift-right" style="margin-left: 10px; "></i></a></li>
+                                        </ul>
+                                     </li>
+                            </ul>
+                            <div class="search_btn">
+                                  
+                                  <input type="search" id="search" placeholder="Search..." />
+                            </div>
+                        </div>  
+                        <div class="noidung">
+                          <h1 style="padding: 20px 0px;">
+                            DANH SÁCH ĐỒ ÁN
+                          </h1>
+                          <div class="ds">
+                            <div class="tendetai">
+                              <h3>Tên Đồ Án</h3>
+
+                              <p> Website bán hàng</p>
+                              <p>Website hướng dẫn làm đẹp</p>
+                              <p>Website bán sách trực tuyến</p>
+                              <p>Xây dựng Quản lý bán hàng</p>
+                              <p>Xây dựng Website streaming game</p>
+                            </div> 
+                            <div class="tengiangvien">
+                             <h3>Tên Giảng Viên</h3>
+                             <p>Adelaide</p>
+                             <p>Patrick</p>
+                             <p>Farley</p>
+                             <p>Kenneth</p>
+                             <p>Richard</p>
+
+                            </div>
+                            <div class="ngaynop">
+                              <h3>Ngày Nộp</h3>
+                              <p>12-12-2021</p>
+                              <p>12-12-2021</p>
+                              <p>12-12-2021</p>
+                              <p>12-12-2021</p>
+                              <p>12-12-2021</p>
+                            </div>
+                            <div class="dangki">
+                              <h3>Đăng Kí</h3>
+                              <button id="btn" name="button" value="OK" type="button" onclick="hello() ">Đăng ký</button>  
+                              <button id="btn" name="button" value="OK" type="button" onclick="hello()">Đăng ký</button>
+                              <button id="btn" name="button" value="OK" type="button" onclick="hello()">Đăng ký</button>
+                              <button id="btn" name="button" value="OK" type="button" onclick="hello()">Đăng ký</button>
+                              <button id="btn" name="button" value="OK" type="button" onclick="hello()">Đăng ký</button>
+                                <script>  
+                                    function hello() {
+                                    var r = confirm("Bạn muốn đăng ký đề tài này không ?");
+                                    if (r == true) {
+                                        window.location.assign("ĐăngKýĐềTài.html")
+                                    } else {
+                                    }
+                                    }
+                                </script>
+                            </div>
+                          </div>
+                        </div>
+
+                     </div>
+                  
+
+
+
+
+                <!-- Footer trang web -->
+                <footer>
+                    <div class="f1">
+                        <p>TRƯỜNG ĐẠI HỌC CÔNG NGHIỆP TP. HCM</p>
+                        <p>Địa chỉ: Số 12 Nguyễn Văn Bảo, Phường 4, Quận Gò Vấp, Thành phố Hồ Chí Minh</p>
+                        <p>Điện thoại: 0283.8940 390</p>
+                        <p>Fax: 0283.9940 954</p>
+                        <p>Email: dhcn@iuh.edu.vn</p>
+                    </div>
+                    <div id="f2">
+                        <p>Thống kê truy cập </p>
+                        <p> Lượt truy cập: 123456</p>
+                        <p>Đang online: 2001</p>
+                    </div>
+               </footer>
+        </div>
+    </div>
+</body>
+</html>

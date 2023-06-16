@@ -1,0 +1,189 @@
+
+    *{
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+    }
+.full{
+    margin: auto;
+    width: 1150px;
+    background-color: #EBFAFE;
+}
+    #content{
+ 
+        margin-left: auto;
+        margin-right: auto;
+    }
+    #container{
+        font-family: Arial, Helvetica, sans-serif;
+    }
+
+    #logo img{
+        width: 100%;
+        display: block;
+    }
+    /* ---------Menu-------------- */
+    #header{
+        height: 50px;
+        width: 100%;
+        background-color: #ACB3B9;
+    }
+    #Menu{
+        display: inline-block;
+    }
+    #Menu ul{
+        display: block;
+    }
+    #Menu > li > a{
+        text-transform: uppercase;
+    }
+    #Menu > li{
+        display: inline-block;
+    }
+    #Menu li{
+        position: relative;
+    }
+    .menu_nav li a,
+    #Menu > li > a{
+        color: #343B8E;
+        text-decoration: none;
+        line-height: 50px;
+        padding: 0 24px;
+        display:block;
+        font-size: 23px;
+        font-weight:bold;
+    }
+    #Menu > li:hover > a{
+        background-color: #EB7B21;
+        color: white;
+    }
+
+    #Menu .menu_nav{
+        /* display: none; */
+        background-color: #ACB3B9;
+        position: absolute;
+        list-style-type: none;
+        display: none;
+        box-shadow: 0 0 50px rgba(0, 0, 0, 0.3);
+    }
+    .menu_nav li:hover a{
+        background-color: #EB7B21;
+        color: white;
+    }
+    .menu_nav li a{
+        color: #343B8E;
+    }
+    .menu_nav li {
+        width: 335px;
+    }
+    #Menu li:hover .menu_nav{
+        display: block;
+    }
+    #Menu .icon_down{
+        margin-top: 2px;
+        font-size: 15px;
+    }
+    /* --------------Search------------- */
+    #header .search_btn{
+        float: right;
+        line-height: 50px;
+       
+    }
+
+    .search_btn input#search{
+  width: 300px;
+  height: 50px;
+  background: #EFEFEF;
+  border: none;
+  font-size: 10pt;
+  float: left;
+  padding-left: 45px;
+  border-radius: 5px;
+}
+
+
+/* ----------FOOTER---------- */
+footer{
+   
+    height: 200px;
+    background-color: #0069D9;
+    color: white;
+    line-height: 23px;
+    padding:10px 10px 0px 10px;
+    }
+
+footer #f2
+{
+    float: right;
+    margin-top: -100px;
+}
+
+/*CSS Nội Dung*/
+.noidung{
+    width: 900px;
+    margin: auto;
+
+
+}
+.noidung h1{
+    color: red;
+    text-align: center;
+}
+.ds{
+    display: flex;
+    border-top: 3px solid black;
+    border-bottom: 3px solid black;
+
+
+}
+.ds h3{
+    border-bottom: 3px solid black;
+    color: blue;
+    text-align: center;
+}
+.ds p{
+    font-size: 20px;
+    padding: 2px;
+    font-family:times new roman;
+}
+.tendetai{
+    width: 40%;
+    height: 300px;
+    border-left: 3px solid black;
+}
+.tengiangvien{
+    width: 30%;
+    height: 300px;
+    border-left: 3px solid black;
+
+
+
+}
+.ngaynop{
+    width: 20%;
+    height: 300px;
+    border-left: 3px solid black;
+
+
+}
+.dangki{
+    height: 300px;
+    width: 10%;
+    border-left: 3px solid black;
+    border-right: 3px solid black;
+}
+.dangki button{
+    background-color: #22e2d5;
+    color: white;
+    text-align: center;
+    font-size: 15px;
+    padding: 1px;
+    margin: 1px 0px 3px 9px;
+    line-height: 17px;
+}
+p{
+    margin: 10px 0px;
+}
+#btn{
+    margin: 7px 10px;
+}

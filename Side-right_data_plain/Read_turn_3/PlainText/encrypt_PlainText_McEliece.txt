@@ -1,0 +1,11 @@
+stt ho va ten mssv nam sinh lop que quan chie cao
+1 huynh 192 2001 1A Biinhf Thuận 170
+2 duy 536 2003 2B Vũng Tàu 169
+3 quang 473 2001 3C Cà Mau 168
+4 huynh 573 2000 4D Hải Dương 171
+5 duy 373 2009 5E Hà Tĩnh 180
+6 quang 909 2005 6F Nghệ An 182
+7 huynh 637 2004 7G Kiên Giang 176
+8 duy 142 2005 8H Bạc Liêu 187
+9 quang 648 2003 9J Sóc Trăng 166
+10 huynh 845 2003 10K Hà Nội 150

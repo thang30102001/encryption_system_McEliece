@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../Icon/themify-icons-font/themify-icons/themify-icons.css">
+    <title>Document</title>
+    <link rel="stylesheet" href="../CSS/PhảnHồi.css">
+    <link rel="stylesheet" href="../CSS/bootstrap.min.css">
+    <script src="../JS/bootstrap.min.js"></script>
+    <script src="../JS/jquery.min.js"></script>
+    <script>
+        $(document).ready(function () {
+            $("#txtcn").blur(function () {
+                var cn= $(this).val();
+                var regcn=/^[A-Z]+[1-9]\d*$/;
+                if(regcn.test(cn)){
+                    $("#ercn").html("");
+                    return true;
+                }
+                else{
+                    $("#ercn").html("Mã ngành không đúng");
+                    return false;
+                }
+            })
+            $("#txtmh").blur(function () {
+                var mh= $(this).val();
+                var regmh=/^[a-zA-z ]*$/;
+                if(regmh.test(mh)){
+                    $("#ermh").html("");
+                    return true;
+                }
+                else{
+                    $("#ermh").html("Lỗi");
+                    return false;
+                }
+            })
+            $("#txtph").blur(function () {
+                var ph= $(this).val();
+                var regph=/^[a-zA-z ]*$/;
+                if(regph.test(ph)){
+                    $("#erph").html("");
+                    return true;
+                }
+                else{
+                    $("#erph").html("Lỗi");
+                    return false;
+                }
+            })
+        })
+            function button() {
+            var r = confirm("Bạn muốn gửi đề tài này không không ?");
+            if (r == true) {
+                alert("Bạn đã gửi thành công")
+                document.getElementById('txtcn').value = ''
+                document.getElementById('txtmh').value = ''
+                document.getElementById('txtph').value = ''
+            } else {
+            }
+            }
+            function btnhuy(){
+                document.getElementById('txtcn').value = ''
+                document.getElementById('txtmh').value = ''
+                document.getElementById('txtph').value = ''
+            }
+    </script>
+</head>
+<body>
+    <div class="full">
+        <div id="container">
+            <!-- Logo hình ảnh -->
+            <div id="logo">
+                <a href=""><img src="../Image/logo.png"></a>
+            </div>
+            <!-- Nội dung trang web -->
+                      <!-- Header trang web -->
+                <div id="header" style="z-index: 1;">
+                    <ul id="Menu">
+                        <li><a href="../HTML/TrangChủ.html"> <i class="ti-home"></i></a></li>
+                        <li>
+                            <a href="">
+                               Sinh viên
+                               <i class="icon_down ti-angle-down"></i>
+                            </a>
+                            <ul class="menu_nav">
+                                <li><a href="../HTML/DanhSachDeTai.html">Xem đồ án</a></li>
+                                <li><a href="../HTML/ĐăngKýĐềTài.html">Đăng ký đồ án</a></li>
+                                <li><a href="../HTML/PhảnHồi.html">Phản hồi ý kiến</a></li>
+                                <li><a href="../HTML/TiếnĐộThựcHiện.html">Tiến độ hoàn thành</a></li>
+                                <li><a href="../HTML/đăng nhập.html">Log-in <i class="ti-shift-right" style="margin-left: 10px; "></i></a></li>
+                            </ul>
+                        </li>
+                        <li>
+                                <a href="">Giảng viên
+                                    <i class="icon_down ti-angle-down"></i>
+                                </a>
+                                <ul class="menu_nav">
+                                    <li><a href="#">Quản lý đồ án</a></li>
+                                    <li><a href="#">Xem danh sách sinh viên</a></li>
+                                    <li><a href="../HTML/đăng nhập.html">Log-in <i class="ti-shift-right" style="margin-left: 10px; "></i></a></li>
+                                </ul>
+                        </li>
+                    </ul>
+                    <div class="search_btn">
+                              
+                        <input type="search" id="search" placeholder="Search..." />
+                    </div>
+                </div>
+            <div class="content" >
+                  <!-- Thống kê -->
+                    
+                  <div class="row" >
+                    <div class="container border" style="height: auto; text-align: center;">
+                        <form action="">
+                            <div class="">
+                                <h1 style="padding-bottom: 2px;">Phản hồi ý kiến của sinh viên</h1>
+                                <p style="border-bottom: 4px double #0c2b69;"> Please fill in this form </p>
+                            </div>
+                            <div class="orm-group" style="padding-bottom: 2px;">
+                                <label class="" for=""><b><h3>Chuyên ngành</h3></b></label>
+                                <div class="">
+                                    <input type="text" name="" id="txtcn" placeholder="Nhập Chuyên ngành" class="" style="border-radius: 20px; height: 30px; width: 500px;"/><br>
+                                    <span id="" class="" style="color: red;">(*)</span>
+                                    <div id="ercn" style="color: red;"></div>
+                                    
+                                </div>
+                                <label class="" for=""><b>
+                                    <h3>Môn học</h3>
+                                </b></label>
+                                <div class="">
+                                    <input type="text" name="" id="txtmh" placeholder="Nhập Môn học" class="" style="border-radius: 20px; height: 30px; width: 500px;" /><br>
+                                    <span id="" class="" style="color: red;">(*)</span>
+                                    <div id="ermh" style="color: red;"></div>
+                                </div>
+                                <label class="" for=""><b><h3>Phản hồi ý kiến</h3></b></label>
+                                <div class="">
+                                    <textarea name="" id="txtph" placeholder="Nhập Phản hồi của sinh viên" style="border-radius: 10px;" cols="70" rows="5"></textarea>
+                                    <span id="" class="" style="color: red;">(*)</span>
+                                    <div id="erph" style="color: red;"></div>
+                                </div>
+                                <label class=""><b>&nbsp;</b></label>
+                                <div class=" text-center">
+                                    <input type="button" name="" id="btn" onclick="button()" class="" value="Gửi" style="width: 60px;height: 30px;"/>
+    
+                                    <input type="button" name="" id="btn" onclick="btnhuy()" class="" value="Hủy"style="width: 60px;height: 30px;" />
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+
+                    </div>
+
+                    <footer>
+                        <div class="f1">
+                            <p>TRƯỜNG ĐẠI HỌC CÔNG NGHIỆP TP. HCM</p>
+                            <p>Địa chỉ: Số 12 Nguyễn Văn Bảo, Phường 4, Quận Gò Vấp, Thành phố Hồ Chí Minh</p>
+                            <p>Điện thoại: 0283.8940 390</p>
+                            <p>Fax: 0283.9940 954</p>
+                            <p>Email: dhcn@iuh.edu.vn</p>
+                        </div>
+                        <div id="f2">
+                            <p>Thống kê truy cập </p>
+                            <p> Lượt truy cập: 123456</p>
+                            <p>Đang online: 2001</p>
+                        </div>
+                </footer>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
