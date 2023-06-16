@@ -1,4 +1,4 @@
-# Sinh vien 1: Huynh Duy Quang - 19520141
+
 # Sinh vien 2: Tran Xuan Thang - 19524341
 
 from flask import Flask, request, redirect, url_for, render_template, send_file
